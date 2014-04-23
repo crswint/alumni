@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Alumni List</title>
 </head>
 <body>
-
+<h2>Alumni</h2>
+<ul>
+        {% for alumn in object_list %}
+            <li><b>Name:</b>  {{ alumn.name }}
+                <b>Email:</b> {{ alumn.email }}
+                <b>Age:</b> {{ alumn.age }}
+                <b>Graduated:</b> {{ alumn.year }}
+                <b>Track:</b> {{ alumn.track }}
+                <b>Looking For Work:</b> {{ alumn.lfw }} </li>
+        {% endfor %}
+    </ul>
+<p>Welcome Page <a href="http://127.0.0.1:8000/welcome">Click Here!</a></p>
 </body>
 </html>
