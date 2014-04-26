@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-from .views import WelcomeView, AlumniList
+from .views import WelcomeView, AlumniList, LookingForWorkView
 
 urlpatterns = patterns('',
     # Examples:
@@ -11,4 +11,5 @@ urlpatterns = patterns('',
 
     url(r'^welcome$', WelcomeView.as_view(), name='welcome'),
     url(r'^alumni$', AlumniList.as_view(), name='alumnilist'),
+    url(r'^lfw$', LookingForWorkView.as_view(), name='lfw'),
 )

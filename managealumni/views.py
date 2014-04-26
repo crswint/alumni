@@ -10,3 +10,10 @@ class WelcomeView(generic.TemplateView):
 
 class AlumniList(generic.ListView):
     model = Alumni
+
+
+class LookingForWorkView(generic.ListView):
+    model = Alumni
+    template_name = 'managealumni/lookingforwork.html'
+    context_object_name = 'lfw_alumni'
+    queryset = Alumni.objects.filter(lfw=True)

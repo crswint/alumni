@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Looking for Work!</title>
+</head>
+<body>
+<h2>Alumni who are currently Looking for Work:</h2>
+<ul>
+            {% for alumni in lfw_alumni %}
+            <li>Name:  {{ alumni.name }}
+                Email: {{ alumni.email }}
+            </li>
+        {% endfor %}
+</ul>
+
+</body>
+</html>

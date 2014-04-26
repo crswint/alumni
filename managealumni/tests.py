@@ -7,7 +7,7 @@ Replace this with more appropriate tests for your application.
 
 from django.test import TestCase
 from django.core.urlresolvers import resolve, reverse
-from .views import WelcomeView
+from .views import WelcomeView, AlumniList, LookingForWorkView
 
 
 class SimpleTest(TestCase):
@@ -25,3 +25,12 @@ class UrlTests(TestCase):
         return self.assertEqual(welcome.func.__name__,
                                 WelcomeView.__name__)
 
+    def test_alumnilist_url(self):
+        alumnilist = resolve(reverse('managealumni:alumnilist'))
+        return self.assertEqual(alumnilist.func.__name__,
+                                AlumniList.__name__)
+
+    def test_lfw_url(self):
+        lfw = resolve(reverse('managealumni:lfw'))
+        return self.assertEqual(lfw.func.__name__,
+                                LookingForWorkView.__name__)
