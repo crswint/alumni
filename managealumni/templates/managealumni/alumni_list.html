@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Alumni List</title>
+    <style>body {background-color:lightblue;}</style>
 </head>
 <body>
 <h2>Alumni</h2>
@@ -9,7 +10,6 @@
         {% for alumn in object_list %}
             <li><b>Name:</b>  {{ alumn.name }}
                 <b>Email:</b> {{ alumn.email }}
-                <b>Age:</b> {{ alumn.age }}
                 <b>Graduated:</b> {{ alumn.year }}
                 <b>Track:</b> {{ alumn.track }}
                 <b>Looking For Work:</b> {{ alumn.lfw }} </li>
