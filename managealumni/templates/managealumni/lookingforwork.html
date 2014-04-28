@@ -2,13 +2,14 @@
 <html>
 <head>
     <title>Looking for Work!</title>
+    <style>body {background-color: #1B1BD6;}</style>
 </head>
 <body>
 <h2>Alumni who are currently Looking for Work:</h2>
 <ul>
             {% for alumni in lfw_alumni %}
-            <li>Name:  {{ alumni.name }}
-                Email: {{ alumni.email }}
+            <li><b>Name:</b>  {{ alumni.name }}
+                <b>Email:</b> {{ alumni.email }}
             </li>
         {% endfor %}
 </ul>
