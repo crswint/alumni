@@ -2,20 +2,30 @@
 <html>
 <head>
     <title>Alumni List</title>
-    <style>body {background-color: #1B1BD6; text-align: center; text-indent: 50px;}</style>
+    <style>body {
+        background-color: #1B1BD6;
+        text-align: center;
+        text-indent: 50px;
+    }
+    </style>
 </head>
+
 <body>
 <h2>Alumni</h2>
-<ul>
+
+<ul style="list-style: none;">
         {% for alumn in object_list %}
             <li><b>Name:</b>  {{ alumn.name }}
                 <b>Email:</b> {{ alumn.email }}
                 <b>Graduated:</b> {{ alumn.year }}
                 <b>Track:</b> {{ alumn.track }}
-                <b>Looking For Work:</b> {{ alumn.lfw }} </li>
+            </li>
         {% endfor %}
     </ul>
+
 <p>Welcome Page <a href="http://127.0.0.1:8000/welcome">Click Here!</a></p>
+
 <p>Alumni Looking For Work <a href="http://127.0.0.1:8000/lfw">Click Here!</a></p>
+
 </body>
 </html>
