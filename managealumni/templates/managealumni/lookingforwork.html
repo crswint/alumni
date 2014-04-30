@@ -12,6 +12,15 @@
     </style>
 </head>
 <body>
+
+<div>
+    <ul>
+    <li style="display:inline;"><a href="http://127.0.0.1:8000/welcome">IIAA Welcome Page</a></li>
+    <li style="display:inline;"><a href="http://127.0.0.1:8000/alumni">IIAA Members</a></li>
+</ul>
+</div>
+
+<div>
 <h2 style="color:white">Alumni Looking for Work:</h2>
 <ul style="list-style: none; color: white">
             {% for alumni in lfw_alumni %}
@@ -20,17 +29,16 @@
             </li>
         {% endfor %}
 </ul>
+</div>
+<div>
 <b><p style="color:white">Check out the following links for GIS jobs:</b></p>
 
 <ul>
     <li style="display:inline;"><a href="http://www.gjc.org/">GIS Jobs Clearinghouse</a></li>
     <li style="display:inline;"><a href="http://www.reddit.com/r/gisjobs/">Reddit GIS Jobs</a></li>
 </ul>
+</div>
 
-<ul>
-    <li style="display:inline;"><a href="http://127.0.0.1:8000/welcome">IIAA Welcome Page</a></li>
-    <li style="display:inline;"><a href="http://127.0.0.1:8000/alumni">Alumni List</a></li>
-</ul>
 
 </body>
 </html>
