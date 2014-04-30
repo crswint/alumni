@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,13 +9,24 @@
         background-size: cover;
         text-align: center;
         text-indent: 50px;
+
     }
+           footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+        }
         table,th,td{
         border:1px solid white;
         color:white;
+
     }
     </style>
+    <script src="{% static "managealumni/sorttable.js" %}"></script>
 </head>
+
 <body>
 
 <div>
@@ -26,7 +38,7 @@
 
 <div>
 <h2 style="color:white">Alumni Looking for Work:</h2>
-<table align="center">
+<table class="sortable" align="center">
     <tr>
         <th>Name</th>
         <th>Email</th>
@@ -53,13 +65,14 @@
 </table>
 </div>
 
-<div>
-<b><p style="color:white">Check out the following links for GIS jobs:</b></p>
+<footer>
+    <p style="color:white">Check out the following links for GIS jobs:</p>
+
 <ul>
     <li style="display:inline;"><a href="http://www.gjc.org/">GIS Jobs Clearinghouse</a></li>
     <li style="display:inline;"><a href="http://www.reddit.com/r/gisjobs/">Reddit GIS Jobs</a></li>
 </ul>
-</div>
+</footer>
 
 </body>
 </html>
