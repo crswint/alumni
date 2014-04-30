@@ -9,6 +9,10 @@
         text-align: center;
         text-indent: 50px;
     }
+        table,th,td{
+        border:1px solid white;
+        color:white;
+    }
     </style>
 </head>
 <body>
@@ -22,23 +26,40 @@
 
 <div>
 <h2 style="color:white">Alumni Looking for Work:</h2>
-<ul style="list-style: none; color: white">
-            {% for alumni in lfw_alumni %}
-            <li><b>Name:</b>  {{ alumni.name }}
-                <b>Email:</b> {{ alumni.email }}
+<table align="center">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+    <tr>
+        <td>
+        <ul style="list-style: none;">
+        {% for alumn in lfw_alumni %}
+            <li>{{ alumn.name }}
             </li>
         {% endfor %}
-</ul>
+        </ul>
+        </td>
+
+        <td>
+        <ul style="list-style: none;">
+        {% for alumn in lfw_alumni %}
+            <li>{{ alumn.email }}
+            </li>
+        {% endfor %}
+        </ul>
+        </td>
+    </tr>
+</table>
 </div>
+
 <div>
 <b><p style="color:white">Check out the following links for GIS jobs:</b></p>
-
 <ul>
     <li style="display:inline;"><a href="http://www.gjc.org/">GIS Jobs Clearinghouse</a></li>
     <li style="display:inline;"><a href="http://www.reddit.com/r/gisjobs/">Reddit GIS Jobs</a></li>
 </ul>
 </div>
-
 
 </body>
 </html>
