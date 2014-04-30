@@ -8,7 +8,9 @@
         text-align: center;
         text-indent: 50px;
     }
-
+    table,th,td{
+        border:1px solid black;
+    }
 </style>
 </head>
 
@@ -22,19 +24,53 @@
 <div>
 <h2>Alumni</h2>
 
-<ul style="list-style: none;">
+<table align="center">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Graduated</th>
+        <th>Track</th>
+    </tr>
+    <tr>
+        <td>
+        <ul style="list-style: none;">
         {% for alumn in object_list %}
-            <li><b>Name:</b>  {{ alumn.name }}
-                <b>Email:</b> {{ alumn.email }}
-                <b>Graduated:</b> {{ alumn.year }}
-                <b>Track:</b> {{ alumn.track }}
+            <li>{{ alumn.name }}
             </li>
         {% endfor %}
-    </ul>
+        </ul>
+        </td>
+
+        <td>
+        <ul style="list-style: none;">
+        {% for alumn in object_list %}
+            <li>{{ alumn.email }}
+            </li>
+        {% endfor %}
+        </ul>
+        </td>
+
+        <td>
+        <ul style="list-style: none;">
+        {% for alumn in object_list %}
+            <li>{{ alumn.year }}
+            </li>
+        {% endfor %}
+        </ul>
+        </td>
+
+        <td>
+        <ul style="list-style: none;">
+        {% for alumn in object_list %}
+            <li>{{ alumn.track }}
+            </li>
+        {% endfor %}
+        </ul>
+        </td>
+    </tr>
+</table>
+
 </div>
-
-
-
 
 </body>
 </html>
