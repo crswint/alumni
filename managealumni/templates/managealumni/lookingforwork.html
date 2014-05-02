@@ -1,0 +1,78 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Looking for Work!</title>
+    <style>body {
+        background-image: url("http://us.wacom.com/~/media/WTC/Images/Interests/Business/710x440_GIS_Aslot.jpg/?mw=780");
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        text-indent: 50px;
+
+    }
+           footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+        }
+        table,th,td{
+        border:1px solid white;
+        color:white;
+
+    }
+    </style>
+    <script src="{% static "managealumni/sorttable.js" %}"></script>
+</head>
+
+<body>
+
+<div>
+    <ul>
+    <li style="display:inline;"><a href="http://127.0.0.1:8000/welcome">IIAA Welcome Page</a></li>
+    <li style="display:inline;"><a href="http://127.0.0.1:8000/alumni">IIAA Members</a></li>
+</ul>
+</div>
+
+<div>
+<h2 style="color:white">Alumni Looking for Work:</h2>
+<table class="sortable" align="center">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+    <tr>
+        <td>
+        <ul style="list-style: none;">
+        {% for alumn in lfw_alumni %}
+            <li>{{ alumn.name }}
+            </li>
+        {% endfor %}
+        </ul>
+        </td>
+
+        <td>
+        <ul style="list-style: none;">
+        {% for alumn in lfw_alumni %}
+            <li>{{ alumn.email }}
+            </li>
+        {% endfor %}
+        </ul>
+        </td>
+    </tr>
+</table>
+</div>
+
+<footer>
+    <p style="color:white">Check out the following links for GIS jobs:</p>
+
+<ul>
+    <li style="display:inline;"><a href="http://www.gjc.org/">GIS Jobs Clearinghouse</a></li>
+    <li style="display:inline;"><a href="http://www.reddit.com/r/gisjobs/">Reddit GIS Jobs</a></li>
+</ul>
+</footer>
+
+</body>
+</html>

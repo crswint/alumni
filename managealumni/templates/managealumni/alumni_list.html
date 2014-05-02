@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Alumni List</title>
+<style>
+    body {
+        background-color: #1B1BD6;
+        text-align: center;
+        text-indent: 50px;
+    }
+    table,th,td{
+        border:1px solid black;
+    }
+</style>
+</head>
+
+<body>
+<div>
+    <ul>
+    <li style="display:inline;"><a href="http://127.0.0.1:8000/welcome">IIAA Welcome Page</a></li>
+    <li style="display:inline;"><a href="http://127.0.0.1:8000/lfw">Employable Alumni</a></li>
+    </ul>
+</div>
+<div>
+<h2>Alumni</h2>
+
+<table align="center">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Graduated</th>
+        <th>Track</th>
+    </tr>
+    <tr>
+        <td>
+        <ul style="list-style: none;">
+        {% for alumn in object_list %}
+            <li>{{ alumn.name }}
+            </li>
+        {% endfor %}
+        </ul>
+        </td>
+
+        <td>
+        <ul style="list-style: none;">
+        {% for alumn in object_list %}
+            <li>{{ alumn.email }}
+            </li>
+        {% endfor %}
+        </ul>
+        </td>
+
+        <td>
+        <ul style="list-style: none;">
+        {% for alumn in object_list %}
+            <li>{{ alumn.year }}
+            </li>
+        {% endfor %}
+        </ul>
+        </td>
+
+        <td>
+        <ul style="list-style: none;">
+        {% for alumn in object_list %}
+            <li>{{ alumn.track }}
+            </li>
+        {% endfor %}
+        </ul>
+        </td>
+    </tr>
+</table>
+
+</div>
+
+</body>
+</html>
