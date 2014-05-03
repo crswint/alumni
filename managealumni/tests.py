@@ -26,11 +26,13 @@ class UrlTests(TestCase):
                                 WelcomeView.__name__)
 
     def test_alumnilist_url(self):
+        """Tests when we go to the alumnilist url loads the alumnilist view"""
         alumnilist = resolve(reverse('managealumni:alumnilist'))
         return self.assertEqual(alumnilist.func.__name__,
                                 AlumniList.__name__)
 
     def test_lfw_url(self):
+        """Tests when we go to the lfw url it loads the lookingforwork view"""
         lfw = resolve(reverse('managealumni:lfw'))
         return self.assertEqual(lfw.func.__name__,
                                 LookingForWorkView.__name__)
