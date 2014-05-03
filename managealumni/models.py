@@ -4,6 +4,7 @@ from django.db import models
 
 
 class Alumni(models.Model):
+    """This model is used to represent an alumni in the database."""
     name = models.CharField(max_length=30)
     email = models.CharField(max_length=30)
     age = models.IntegerField()

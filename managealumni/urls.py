@@ -2,7 +2,8 @@ from django.conf.urls import patterns, include, url
 from .views import WelcomeView, AlumniList, LookingForWorkView
 
 urlpatterns = patterns('',
-    # Examples:
+
+    # Example URL format:
     # url(r'^$', 'gisc.views.home', name='home'),
     # url(r'^gisc/', include('gisc.foo.urls')),
 
